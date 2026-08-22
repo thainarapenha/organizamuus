@@ -12,10 +12,12 @@
     "expo": "~54.0.36",
     "expo-status-bar": "~3.0.9",
     "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react-native": "0.81.5",
+    "styled-components": "^6.5.3"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
+    "@types/styled-components": "^5.1.36",
     "typescript": "~5.9.2"
   },
   "private": true

@@ -15,7 +15,7 @@ export const DropdownButton = styled.TouchableOpacity`
   padding: 0 16px;
 
   border-width: 1px;
-  border-color: ${({ theme }) => theme.colors.gray_500};
+  border-color: ${({ theme }) => theme.colors.gray_200};
   border-radius: 8px;
 
   background-color: ${({ theme }) => theme.colors.white_100};
@@ -25,16 +25,20 @@ export const DropdownButton = styled.TouchableOpacity`
   justify-content: space-between;
 `;
 
-export const DropdownText = styled.Text`
+export const DropdownText = styled.Text<{ selected: boolean }>`
   font-size: ${({ theme }) => theme.font_size.sm}px;
-  color: ${({ theme }) => theme.colors.gray_900};
+
+  color: ${({ theme, selected }) =>
+    selected
+      ? theme.colors.gray_900
+      : theme.colors.gray_200};
 `;
 
 export const OptionsContainer = styled.View`
   margin-top: 4px;
 
   border-width: 1px;
-  border-color: ${({ theme }) => theme.colors.gray_500};
+  border-color: ${({ theme }) => theme.colors.gray_200};
   border-radius: 8px;
 
   background-color: ${({ theme }) => theme.colors.white_100};

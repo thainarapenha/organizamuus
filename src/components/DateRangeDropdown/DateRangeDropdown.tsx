@@ -99,13 +99,15 @@ export function DateRangePicker({
       <Label>{label}</Label>
 
       <DropdownButton onPress={() => setIsOpen(true)}>
-        <DropdownText>
+        <DropdownText selected={!!startDate && !!endDate}>
           {startDate && endDate
             ? `${formatDate(startDate)} - ${formatDate(endDate)}`
             : placeholder}
         </DropdownText>
 
-        <DropdownText>▼</DropdownText>
+        <DropdownText selected={!!startDate && !!endDate}>
+          ▼
+        </DropdownText>
       </DropdownButton>
 
       <Modal

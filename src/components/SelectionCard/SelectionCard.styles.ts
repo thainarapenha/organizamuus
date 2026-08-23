@@ -14,12 +14,12 @@ export const Container = styled.TouchableOpacity<{ selected: boolean }>`
 
   border-color: ${({ theme, selected }) =>
     selected
-      ? theme.colors.primary
-      : theme.colors.gray_500};
+      ? theme.colors.primary_600
+      : theme.colors.gray_200};
 
   background-color: ${({ theme, selected }) =>
     selected
-      ? theme.colors.primary
+      ? theme.colors.primary_50
       : theme.colors.white_100};
 `;
 
@@ -32,6 +32,6 @@ export const Label = styled.Text<{ selected: boolean }>`
 
   color: ${({ theme, selected }) =>
     selected
-      ? theme.colors.white_100
+      ? theme.colors.primary_600
       : theme.colors.gray_900};
 `;

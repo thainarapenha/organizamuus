@@ -12,6 +12,7 @@ export const StackRoutes = () => {
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
+          animation: "fade",
         }}
       >
         <Stack.Screen

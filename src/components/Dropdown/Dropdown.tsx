@@ -46,11 +46,11 @@ export function Dropdown({
       <Label>{label}</Label>
 
       <DropdownButton onPress={() => setIsOpen((previous) => !previous)}>
-        <DropdownText>
+        <DropdownText selected={!!selectedOption}>
           {selectedOption?.label ?? placeholder}
         </DropdownText>
 
-        <DropdownText>
+        <DropdownText selected={!!selectedOption}>
           {isOpen ? "▲" : "▼"}
         </DropdownText>
       </DropdownButton>

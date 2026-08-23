@@ -49,7 +49,7 @@ export const CreateTaskPresenterScreen = () => {
                   size={24}
                   color={
                     selectedRoom === "living_room"
-                      ? theme.colors.white_100
+                      ? theme.colors.primary_600
                       : theme.colors.gray_900
                   }
                 />
@@ -66,7 +66,7 @@ export const CreateTaskPresenterScreen = () => {
                   size={24}
                   color={
                     selectedRoom === "kitchen"
-                      ? theme.colors.white_100
+                      ? theme.colors.primary_600
                       : theme.colors.gray_900
                   }
                 />
@@ -83,7 +83,7 @@ export const CreateTaskPresenterScreen = () => {
                   size={24}
                   color={
                     selectedRoom === "bedroom"
-                      ? theme.colors.white_100
+                      ? theme.colors.primary_600
                       : theme.colors.gray_900
                   }
                 />
@@ -100,7 +100,7 @@ export const CreateTaskPresenterScreen = () => {
                   size={24}
                   color={
                     selectedRoom === "bathroom"
-                      ? theme.colors.white_100
+                      ? theme.colors.primary_600
                       : theme.colors.gray_900
                   }
                 />

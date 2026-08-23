@@ -13,8 +13,8 @@ export const Container = styled.TouchableOpacity<{ disabled: boolean }>`
 
   border-color: ${({ theme, disabled }) =>
     disabled
-      ? theme.colors.gray_500
-      : theme.colors.gray_500};
+      ? theme.colors.gray_200
+      : theme.colors.gray_200};
 
   background-color: ${({ theme, disabled }) =>
     disabled

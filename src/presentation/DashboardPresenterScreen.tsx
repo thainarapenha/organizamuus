@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
-import { tasksMock } from "@/mocks/tasks";
+import { tasksMock } from "@/data/mocks/tasks";
 import { TaskItem } from "@/components/TaskItem/TaskItem";
 import { ProgressCard } from "@/components/ProgressCard/ProgressCard";
 import { BottomMenu } from "@/components/BottomMenu/BottomMenu";

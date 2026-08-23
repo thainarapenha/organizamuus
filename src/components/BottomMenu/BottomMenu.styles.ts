@@ -59,7 +59,7 @@ export const AddButton = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 
-  border-radius: 31px;
+  border-radius: 32px;
 
   background-color: ${({ theme }) => theme.colors.primary_500};
 
@@ -73,6 +73,6 @@ export const AddButton = styled.TouchableOpacity`
 export const AddIcon = styled.Text`
   color: ${({ theme }) => theme.colors.white_50};
 
-  font-size: 34px;
+  font-size: ${({ theme }) => theme.font_size.xxl}px;
   line-height: 38px;
 `;

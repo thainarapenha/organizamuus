@@ -15,6 +15,7 @@ import {
   TitleSection,
   UserImage,
 } from "./DashboardPresenterScreen.styles";
+import { ProgressCard } from "@/components/ProgressCard/ProgressCard";
 
 export const DashboardPresenterScreen = () => {
   const [tasks] = useState(tasksMock);
@@ -33,6 +34,8 @@ export const DashboardPresenterScreen = () => {
         />
       </HeaderContainer>
 
+
+      <ProgressCard tasks={tasks} />
       <ContainerText>
         <TitleSection>
           Próximas tarefas

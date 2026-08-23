@@ -12,14 +12,14 @@ export const tasksMock: Task[] = [
   {
     id: "1",
     title: "Limpar a cozinha",
-    status: "pendente",
+    status: "concluido",
     date: "22/08/2026",
     icon: "restaurant-outline",
   },
   {
     id: "2",
     title: "Lavar os banheiros",
-    status: "atrasado",
+    status: "concluido",
     date: "21/08/2026",
     icon: "water-outline",
   },

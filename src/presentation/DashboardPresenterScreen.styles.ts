@@ -48,11 +48,14 @@ export const UserImage = styled.Image`
 
 export const ContainerText = styled.View`
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 80%;
+  z-index: 1;
 
-  padding: 8%;
+  bottom: 0;
+
+  width: 100%;
+  height: 70%;
+
+  padding: 18% 8% 8%;
 
   border-top-left-radius: 42px;
   border-top-right-radius: 42px;

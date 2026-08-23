@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-import type { TaskStatus } from "@/mocks/tasks";
+import type { TaskStatus } from "@/data/mocks/tasks";
 
 interface TitleProps {
   completed: boolean;

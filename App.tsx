@@ -1,26 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 import theme from '@/theme/lightTheme';
-import { DashboardPresenterScreen } from '@/presentation/DashboardPresenterScreen';
+import { StackRoutes } from '@/routes/stackRoutes';
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-      <DashboardPresenterScreen/>
-      {/* <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View> */}
+      <StackRoutes />
     </ThemeProvider>
   );
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });

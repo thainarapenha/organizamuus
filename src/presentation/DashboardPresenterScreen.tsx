@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
-import { tasksMock } from "@/mocks/tasks";
+import { tasksMock } from "@/data/mocks/tasks";
 import { TaskItem } from "@/components/TaskItem/TaskItem";
+import { ProgressCard } from "@/components/ProgressCard/ProgressCard";
+import { BottomMenu } from "@/components/BottomMenu/BottomMenu";
 
 import {
   Container,
@@ -15,9 +18,10 @@ import {
   TitleSection,
   UserImage,
 } from "./DashboardPresenterScreen.styles";
-import { ProgressCard } from "@/components/ProgressCard/ProgressCard";
 
 export const DashboardPresenterScreen = () => {
+  const navigation = useNavigation();
+  
   const [tasks] = useState(tasksMock);
   return (
     <Container>
@@ -52,6 +56,11 @@ export const DashboardPresenterScreen = () => {
           </ContainerInfo>
         </ScrollContainer>
       </ContainerText>
+
+      <BottomMenu
+        activeItem="inicio"
+        onAddPress={() => navigation.navigate("CreateTask")}
+      />
     </Container>
   );
 };

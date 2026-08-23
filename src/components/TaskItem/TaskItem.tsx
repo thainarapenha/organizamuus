@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 
-import type { Task } from "@/mocks/tasks";
+import type { Task } from "@/data/mocks/tasks";
 
 import {
   Container,

@@ -65,6 +65,9 @@ export const ContainerText = styled.View`
 
 export const ScrollContainer = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
+  contentContainerStyle: {
+    paddingBottom: 80,
+  },
 })`
   flex: 1;
   width: 100%;

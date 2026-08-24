@@ -30,12 +30,12 @@ type DateRangePickerProps = {
   }) => void;
 };
 
-export function DateRangePicker({
+export const DateRangePicker = ({
   label,
   placeholder = "Selecione o período",
   value,
   onChange,
-}: DateRangePickerProps) {
+}: DateRangePickerProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [startDate, setStartDate] = useState(
@@ -114,6 +114,7 @@ export function DateRangePicker({
         visible={isOpen}
         transparent
         animationType="slide"
+        statusBarTranslucent
         onRequestClose={() => setIsOpen(false)}
       >
         <ModalOverlay>

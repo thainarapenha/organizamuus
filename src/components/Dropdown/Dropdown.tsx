@@ -23,13 +23,13 @@ type DropdownProps = {
   onChange?: (value: string) => void;
 };
 
-export function Dropdown({
+export const Dropdown = ({
   label,
   placeholder = "Selecione",
   options,
   value,
   onChange,
-}: DropdownProps) {
+}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const selectedOption = options.find(

@@ -59,6 +59,25 @@ export const DashboardPresenterScreen = () => {
 
       <BottomMenu
         activeItem="inicio"
+        onNavigate={(screen) => {
+          switch (screen) {
+            case "inicio":
+              navigation.navigate("Dashboard");
+              break;
+
+            case "historico":
+              navigation.navigate("History");
+              break;
+
+            case "notificacoes":
+              navigation.navigate("Notifications");
+              break;
+
+            case "perfil":
+              navigation.navigate("Profile");
+              break;
+          }
+        }}
         onAddPress={() => navigation.navigate("CreateTask")}
       />
     </Container>

@@ -5,6 +5,7 @@ import { DashboardPresenterScreen } from "@/presentation/DashboardPresenterScree
 import { CreateTaskPresenterScreen } from "@/presentation/CreateTaksPresenterScreen";
 import { StartPresenterScreen } from "@/presentation/StartPresenterScreen";
 import { RegisterPresenterScreen } from "@/presentation/RegisterPresenterScreen";
+import { HistoryPresenterScreen } from "@/presentation/HistoryPresenterScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,11 @@ export const StackRoutes = () => {
         <Stack.Screen
           name="CreateTask"
           component={CreateTaskPresenterScreen}
+        />
+
+        <Stack.Screen
+          name="History"
+          component={HistoryPresenterScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -19,6 +19,9 @@ import {
   TaskList,
   HeaderContainer,
 } from "./HistoryPresenterScreen.styles";
+import { useState } from "react";
+import { HistoryFilterModalPresenterScreen } from "./HistoryFilterModalPresenterScreen";
+import { BottomMenu } from "@/components/BottomMenu/BottomMenu";
 
 export const HistoryPresenterScreen = () => {
   const navigation = useNavigation();
@@ -30,6 +33,15 @@ export const HistoryPresenterScreen = () => {
   const lastWeekTasks = tasksMock.filter(
     (task) => task.period === "ultima_semana"
   );
+
+  const [filterVisible, setFilterVisible] = useState(false);
+
+  const [filterPeriod, setFilterPeriod] = useState({
+    startDate: "",
+    endDate: "",
+  });
+
+  const [filterResponsible, setFilterResponsible] = useState("");
 
   return (
     <Container>
@@ -47,7 +59,7 @@ export const HistoryPresenterScreen = () => {
             </Subtitle>
           </TitleTextContainer>
 
-          <FilterButton onPress={() => {}}>
+          <FilterButton onPress={() => setFilterVisible(true)}>
             <Ionicons
               name="options-outline"
               size={22}
@@ -86,6 +98,49 @@ export const HistoryPresenterScreen = () => {
           </Section>
         </List>
       </Content>
+
+      <BottomMenu
+        activeItem="historico"
+        onNavigate={(screen) => {
+          switch (screen) {
+            case "inicio":
+              navigation.navigate("Dashboard");
+              break;
+
+            case "historico":
+              break;
+
+            case "notificacoes":
+              navigation.navigate("Notifications");
+              break;
+
+            case "perfil":
+              navigation.navigate("Profile");
+              break;
+          }
+        }}
+        onAddPress={() => navigation.navigate("CreateTask")}
+      />
+
+      <HistoryFilterModalPresenterScreen
+        visible={filterVisible}
+        period={filterPeriod}
+        responsible={filterResponsible}
+        onPeriodChange={setFilterPeriod}
+        onResponsibleChange={setFilterResponsible}
+        onApply={() => {
+          setFilterVisible(false);
+        }}
+        onClear={() => {
+          setFilterPeriod({
+            startDate: "",
+            endDate: "",
+          });
+
+          setFilterResponsible("");
+        }}
+        onClose={() => setFilterVisible(false)}
+      />
     </Container>
   );
 };

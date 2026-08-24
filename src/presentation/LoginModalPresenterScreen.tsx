@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal } from "react-native";
+import { Modal, Pressable } from "react-native";
 
 import {
   ModalOverlay,
@@ -39,6 +39,11 @@ export const LoginModalPresenterScreen = ({visible, onClose}: LoginModalProps) =
       onRequestClose={onClose}
     >
       <ModalOverlay>
+        <Pressable
+          style={{ flex: 1 }}
+          onPress={onClose}
+        />
+        
         <ModalContainer>
           <Header>
             <Title>Bem-vindo de volta!</Title>

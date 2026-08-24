@@ -25,7 +25,7 @@ export const BottomMenu = ({
     <Container>
       <MenuItem onPress={() => onNavigate?.("inicio")}>
         <Ionicons
-          name="home"
+          name="home-outline"
           size={23}
           color={activeItem === "inicio" ? "#5045E6" : "#8E8E93"}
         />

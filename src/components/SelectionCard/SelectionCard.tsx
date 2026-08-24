@@ -13,12 +13,12 @@ type SelectionCardProps = {
   onPress: () => void;
 };
 
-export function SelectionCard({
+export const SelectionCard = ({
   label,
   icon,
   selected,
   onPress,
-}: SelectionCardProps) {
+}: SelectionCardProps) => {
   return (
     <Container
       selected={selected}

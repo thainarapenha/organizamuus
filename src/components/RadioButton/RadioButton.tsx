@@ -15,13 +15,13 @@ type RadioButtonProps = {
   onPress: () => void;
 };
 
-export function RadioButton({
+export const RadioButton = ({
   title,
   subtitle,
   selected,
   disabled = false,
   onPress,
-}: RadioButtonProps) {
+}: RadioButtonProps) => {
   return (
     <Container
       onPress={onPress}

@@ -12,12 +12,12 @@ type ButtonProps = {
   disabled?: boolean;
 };
 
-export function Button({
+export const Button = ({
   title,
   variant = "filled",
   onPress,
   disabled = false,
-}: ButtonProps) {
+}: ButtonProps) => {
   return (
     <Container
       variant={variant}
